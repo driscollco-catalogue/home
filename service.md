@@ -1,9 +1,25 @@
 # Service Library
 
 The service library is a Go library which makes it easy to create a microservice
-with the minimum of scaffolding. It contains an http router, a process library
-which allows easy management of multiple goroutines and a config management
-library. 
+with the minimum of scaffolding. It contains an http router, an instance of
+the log library, a process library which allows easy management of multiple 
+goroutines and a config management library.
+
+Some of these libraries propagate down to individual http requests or 
+goroutine processes as the `service` library supplies them via calls on the
+libraries it bundles, eg. on setup, the `service` library can call `WithLog()`
+or `WithDb` to pass on specific logs, database connections or other resources.
+This happens 'behind the scenes' so as long as you supply these resources to the
+service library, you will find them available in your goroutines and your 
+http request processing via functions like `Log()` or `Db()`. You can see an 
+example of this in the code below.
+
+## Included Libraries
+
+* [Config Library](https://github.com/driscollos/config)
+* [Http Router](https://github.com/driscollco-core/http-router)
+* [Process Group](https://github.com/driscollco-core/process-group)
+* [Log](https://github.com/driscollco-core/log)
 
 ## Example Microservice
 
