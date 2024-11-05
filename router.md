@@ -99,16 +99,16 @@ of the `router.Request` help you to work with an incoming http request and craft
 * `PostVariableExists(name string) bool` - Simple boolean check; does the specified `POST` variable exist as part of this request
 * `Error(response ...interface{}) Response` - Respond to the client indicating a failed request. If the first parameter is an 
 `HTTP status code` eg. `http.StatusBadRequest`, this is the status code that goes back to the client. Add as many parameters as
-you like. If any of the parameters is a `struct` this will automatically be converted to `json`. The default status code if none
+you like. If any parameter is a `struct` this will automatically be converted to `json`. The default status code if none
 is specified is `http.StatusBadRequest`
 * `PermanentRedirect(destination string) Response` - Respond with a permanent redirect to the supplied destination
 * `Redirect(destination string) Response` - Respond with a temporary redirect to the supplied destination
 * `Response(response ...interface{}) Response` - Respond to the client. If the first parameter is an
   `HTTP status code` eg. `http.StatusOK`, this is the status code that goes back to the client. Add as many parameters as
-  you like. If any of the parameters is a `struct` this will automatically be converted to `json`. The default status code if none
+  you like. If any parameter is a `struct` this will automatically be converted to `json`. The default status code if none
   is specified is `http.StatusOK`
 * `SetResponseHeader(key, val string)` - Set a header to be included with your response
 * `Success(response ...interface{}) Response` - Respond to the client indicating a successful request. If the first parameter is an
   `HTTP status code` eg. `http.StatusOK`, this is the status code that goes back to the client. Add as many parameters as
-  you like. If any of the parameters is a `struct` this will automatically be converted to `json`. The default status code if none
+  you like. If any parameter is a `struct` this will automatically be converted to `json`. The default status code if none
   is specified is `http.StatusOK`
