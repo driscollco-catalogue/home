@@ -70,3 +70,45 @@ stop accepting connections when the supplied context is `done`
 * `WithPort(port int)` - listen on the specified port
 * `WithTLS(key, cert string)` - use TLS with the supplied key and certificate (leave blank and the router will generate a self
 signed cert)
+
+## Request Methods
+
+When writing a handler, the only parameter your handler should accept is an instance of `router.Request`. This replaces the
+traditional structure of `(w ResponseWriter, r *Request)`. There is nothing wrong with these (in fact the `http router` uses these 
+under the hood) but the http router aims to simplify writing a router as much as is possible. The following methods 
+of the `router.Request` help you to work with an incoming http request and craft a response:
+
+* `ArgExists(name string) bool` - Check if a URL argument exists or not
+* `Body() []byte` - Get the body of a request (for methods like `POST`)
+* `BodyError() error` - If there was an issue retrieving the body of a request, examine that via this method
+* `Cache() cache.Cache` - Get an instance of a cache, shared across all requests (thread safe)
+* `Context() context.Context` - Get the `context` of the incoming request
+* `Db() fireStore.Client` - Get a ready to go client for `GCP FireStore` - this is supplied to the `http router` on service setup
+* `GetArg(name string) string` - Get the value of the specified url argument
+* `GetHeader(header string) string` - Get the specified HTTP header (blank if the header is not present)
+* `GetHeaders() map[string][]string` - Get a map of all HTTP headers sent as part of the incoming request
+* `GetHost() string` - Get the hostname the incoming request was sent to
+* `GetIp() string` - Get the `ip address` of the client making the http request
+* `GetPostVariable(name string) string` - Get a traditional `POST` variable
+* `GetReferer() string` - Get the `REFERER` header if one was present
+* `GetURL() string` - Get the complete URL of the incoming request
+* `GetUserAgent() string` - Get the `User-Agent` header if present
+* `HasBody() bool` - Simple boolean check; did this request have a body of `> 0` length
+* `HeaderExists(header string) bool` - Boolean check; did this request include the specified header
+* `Log() log.Log` - Get an instance of a logger
+* `PostVariableExists(name string) bool` - Simple boolean check; does the specified `POST` variable exist as part of this request
+* `Error(response ...interface{}) Response` - Respond to the client indicating a failed request. If the first parameter is an 
+`HTTP status code` eg. `http.StatusBadRequest`, this is the status code that goes back to the client. Add as many parameters as
+you like. If any of the parameters is a `struct` this will automatically be converted to `json`. The default status code if none
+is specified is `http.StatusBadRequest`
+* `PermanentRedirect(destination string) Response` - Respond with a permanent redirect to the supplied destination
+* `Redirect(destination string) Response` - Respond with a temporary redirect to the supplied destination
+`Response(response ...interface{}) Response` - Respond to the client. If the first parameter is an
+  `HTTP status code` eg. `http.StatusOK`, this is the status code that goes back to the client. Add as many parameters as
+  you like. If any of the parameters is a `struct` this will automatically be converted to `json`. The default status code if none
+  is specified is `http.StatusOK`
+* `SetResponseHeader(key, val string)` - Set a header to be included with your response
+* `Success(response ...interface{}) Response` - Respond to the client indicating a successful request. If the first parameter is an
+  `HTTP status code` eg. `http.StatusOK`, this is the status code that goes back to the client. Add as many parameters as
+  you like. If any of the parameters is a `struct` this will automatically be converted to `json`. The default status code if none
+  is specified is `http.StatusOK`
