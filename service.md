@@ -17,7 +17,7 @@ example of this in the code below.
 ## Included Libraries
 
 * [Config Library](https://github.com/driscollos/config)
-* [Http Router](https://github.com/driscollco-core/http-router)
+* [Http Router](router.md)
 * [Process Group](https://github.com/driscollco-core/process-group)
 * [Log](https://github.com/driscollco-core/log)
 
