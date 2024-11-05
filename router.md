@@ -103,7 +103,7 @@ you like. If any of the parameters is a `struct` this will automatically be conv
 is specified is `http.StatusBadRequest`
 * `PermanentRedirect(destination string) Response` - Respond with a permanent redirect to the supplied destination
 * `Redirect(destination string) Response` - Respond with a temporary redirect to the supplied destination
-`Response(response ...interface{}) Response` - Respond to the client. If the first parameter is an
+* `Response(response ...interface{}) Response` - Respond to the client. If the first parameter is an
   `HTTP status code` eg. `http.StatusOK`, this is the status code that goes back to the client. Add as many parameters as
   you like. If any of the parameters is a `struct` this will automatically be converted to `json`. The default status code if none
   is specified is `http.StatusOK`
