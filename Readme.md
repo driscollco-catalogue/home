@@ -36,7 +36,7 @@ library.
 
 ## Shortify.pro
 
-<img src="/img/shortify.png" width="500px" style="margin-right: 50px;"/>
+<img src="/img/shortify.png" width="200px" style="margin-right: 50px;"/>
 
 Shortify.pro is a URL shortening site. It is used as a testbed for advanced
 software techniques. It has an event driven architecture handled by GCP Pub/Sub
