@@ -36,10 +36,10 @@ library.
 
 ## Shortify.pro
 
-<img src="/img/shortify.png" width="350px" align="left" style="margin-right: 50px; box-shadow: 12px 12px 2px 1px black;"/>
+[<img src="/img/shortify.png" width="350px" align="left" style="margin-right: 50px;"/>](https://shortify.pro)
 
-Shortify.pro is a URL shortening site. It is used as a testbed for advanced
-software techniques. It has an event driven architecture handled by GCP Pub/Sub
-and uses GCP FireStore for data storage.
+[Shortify.pro](https://shortify.pro) is a URL shortening site. It is used as a testbed for advanced
+software techniques. It has an event driven architecture handled by [GCP Pub/Sub](https://cloud.google.com/pubsub/docs/overview)
+and uses [GCP FireStore](https://cloud.google.com/firestore#all-features) for data storage.
 
 <br clear="left"/>
