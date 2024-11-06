@@ -2,6 +2,8 @@
 
 ## Config
 
+[![Repository](https://img.shields.io/badge/Repository-github.com/driscollos/config%20-blue)](https://github.com/driscollos/config)
+
 The [Config library](https://github.com/driscollos/config) is a library which manages configuration of services. Configuration
 information is sourced from three places; the commandline, environment variables and yaml or json files. You can access
 configuration information either by direct access functions eg `.String("variableName")` or `.Int("variableName")` or by
