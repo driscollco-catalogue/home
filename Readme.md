@@ -1,10 +1,5 @@
 # Libraries
 
-<img src="https://wallpapers.com/images/high/anonymous-profile-silhouette-b714qekh29tu1anb.png" width="200px" align="left" style="margin-right: 30px;"/>
-some text floating around the image
-
-<br clear="left"/>
-
 ## Config
 
 [![Repository](https://img.shields.io/badge/Repository-github.com/driscollos/config%20-blue)](https://github.com/driscollos/config)
