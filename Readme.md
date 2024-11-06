@@ -39,7 +39,8 @@ library.
 [<img src="/img/shortify.png" width="350px" align="left" style="margin-right: 50px;"/>](https://shortify.pro)
 
 [Shortify.pro](https://shortify.pro) is a URL shortening site. It is used as a testbed for advanced
-software techniques. It has an event driven architecture handled by [GCP Pub/Sub](https://cloud.google.com/pubsub/docs/overview)
+software techniques. It has an event driven architecture handled by 
+<a href=https://cloud.google.com/pubsub/docs/overview" target="_blank">GCP Pub/Sub</a>
 and uses [GCP FireStore](https://cloud.google.com/firestore#all-features) for data storage.
 
 <br clear="left"/>
