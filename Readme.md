@@ -1,4 +1,11 @@
-# Repo Catalogue
+# Libraries
+
+## Config
+
+The [Config library](https://github.com/driscollos/config) is a library which manages configuration of services. Configuration
+information is sourced from three places; the commandline, environment variables and yaml or json files. You can access
+configuration information either by direct access functions eg `.String("variableName")` or `.Int("variableName")` or by
+populating a struct.
 
 ## Http Router
 
