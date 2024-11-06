@@ -1,5 +1,18 @@
 # Libraries
 
+<style type="text/css">
+.image-left {
+  display: block;
+  margin-left: auto;
+  margin-right: 30px;
+  margin-bottom: 10px;
+  float: left;
+}
+</style>
+
+<img src="https://wallpapers.com/images/high/anonymous-profile-silhouette-b714qekh29tu1anb.png" width="200px" class="image-left"/>
+some text floating around the image
+
 ## Config
 
 [![Repository](https://img.shields.io/badge/Repository-github.com/driscollos/config%20-blue)](https://github.com/driscollos/config)
