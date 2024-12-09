@@ -38,3 +38,12 @@ software techniques. It has an event driven architecture handled by [GCP Pub/Sub
 and uses [GCP FireStore](https://cloud.google.com/firestore#all-features) for data storage.
 
 <br clear="left"/>
+
+## Flow Control
+
+[<img src="/img/flow.png" width="350px" align="left" style="margin-right: 50px;"/>](https://flow.driscoll.co)
+
+[Flow Control](https://flow.driscoll.co) is a project to manage rate limiting without the need for api gateways.
+It is entirely cloud based; it comprises a number of GCP Cloud Run services and GCP fireStore for state management.
+
+<br clear="left"/>
